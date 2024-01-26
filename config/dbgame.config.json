@@ -1,0 +1,10 @@
+{
+    "dbName": "game_test",
+    "username": "postgres",
+    "password": "12345",
+    "host": "localhost",
+    "port": 5432,
+    "ssl": false,
+    "dbType": "Postgres",
+    "_dbType_Comment": "Allow value :Mysql, Mariadb, MSSQL, Oracle, Postgres, Db2"
+}

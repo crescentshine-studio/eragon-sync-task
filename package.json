@@ -1,0 +1,35 @@
+{
+  "name": "sync-task",
+  "version": "1.0.0",
+  "description": "using for game provider run on clien",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev-producer": "EAR3_ROOT_API='https://api-testnet.eragon.gg' GAME_API_KEY='WMCGXNH9BIX140R' GAME_ID='MONSHUB' CHAIN_ID='97' node producer.js ",
+    "dev-consumer": "EAR3_ROOT_API='https://api-testnet.eragon.gg' GAME_API_KEY='WMCGXNH9BIX140R' GAME_ID='MONSHUB' CHAIN_ID='97' node consumer.js ",
+    "run-consumer": "pm2 start consumer.js",
+    "run-producer": "pm2 start producer.js"
+  },
+  "keywords": [
+    "era3"
+  ],
+  "author": "thongvv",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "crypto": "^1.0.1",
+    "ether": "^0.0.9",
+    "ethers": "^6.8.0",
+    "mariadb": "^3.2.1",
+    "mysql2": "^3.6.1",
+    "oracledb": "^6.2.0",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "pm2": "^5.3.0",
+    "sequelize": "^6.33.0",
+    "sqlite3": "^5.1.6",
+    "tedious": "^16.4.1",
+    "web3": "^4.1.2",
+    "web3-eth-abi": "^4.1.2"
+  }
+}
