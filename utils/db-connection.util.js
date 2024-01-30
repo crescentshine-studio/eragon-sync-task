@@ -12,6 +12,7 @@ module.exports.connectDbAccount = async () => {
     dbGame.Sequelize = Sequelize;
     let sequelize = new Sequelize(dbConfig.dbName, dbConfig.username, dbConfig.password, {
         host: dbConfig.host,
+        port: dbConfig.port,
         dialect: getDialectByDb(dbConfig.dbType),
         dialectOptions: {
             connectTimeout: 3000

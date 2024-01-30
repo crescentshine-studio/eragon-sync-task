@@ -19,7 +19,7 @@ async function processSyncJob(dbTask, dbGame) {
         console.log('Update game db for tx:', txHash);
         switch (txType) {
             case TRANSACTION_TYPE.DEPOSITE:
-                result = await updatePointInGame(dbGame, onchainData.playerId, row.dataValues.currency, parseInt(onchainData.actualAmount * onchainData.rate));
+                result = await updatePointInGame(dbGame, parseInt(onchainData.playerId), row.dataValues.currency, parseInt(onchainData.actualAmount * onchainData.rate));
                 break
             default:
                 console.error(`Cannot implement for Tx type: ${txType}-Tx hash:${txHash}`);

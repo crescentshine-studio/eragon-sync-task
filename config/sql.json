@@ -1,6 +1,6 @@
 {
     "Deposite": {
-        "MSTR": "update \"Player\" SET \"in_game_point\"=:newpoint WHERE \"pId\"=:playerId;",
+        "MSTR": "update Player SET in_game_point =:newpoint WHERE pId=:playerId;",
         "SecondToken": ""
     }
 }

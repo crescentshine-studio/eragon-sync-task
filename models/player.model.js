@@ -13,8 +13,8 @@ module.exports.updatePointInGame = async (dbGame, playerId, rawQueryName, point)
             },
             type: QueryTypes.RAW
         });
-        //console.log("rows effect:", rows, "result:", result);
-        if (result && result.rowCount > 0) {
+        console.log("rows effect:", rows, "result:", result);
+        if (result && result.changedRows > 0) {
             return true;
         } else {
             console.error("Cannot found player:", playerId);
@@ -22,7 +22,7 @@ module.exports.updatePointInGame = async (dbGame, playerId, rawQueryName, point)
         return false;
     } catch (error) {
         await processError('Error when update point in game:', error);
-        return true;
+        return false;
     }
 }
 module.exports.createPlayer = async (dbGame, playerId, point) => {
